@@ -48,21 +48,37 @@
       width: 100%;
       margin-top: 20px;
     }
+
+    /* New styles to fix height alignment */
+    .equal-height {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .summary {
+      flex-grow: 1;
+    }
   </style>
 </head>
 <body>
-  <div class="container bg-secondary">
-    <div class="block-heading mx-auto">
+  <div class="container bg-secondary py-3">
+    <div class="block-heading">
       <h2>Shopping Cart</h2>
       <p>Review your selected items before checkout</p>
     </div>
 
-    <div class="row mx-auto d-flex align-items-stretch">
+    <div class="row equal-height">
       <!-- Left side: Product listing -->
-      <div class="col-md-8 bg-light">
+      <div class="col-md-8 bg-light left">
         <div class="product">
-          <div class="row ">
-            <div class="col-md-2 ">
+          <div class="row">
+            <div class="col-md-3">
               <img
                 src="https://via.placeholder.com/150"
                 class="img-fluid"
@@ -70,78 +86,80 @@
               />
             </div>
             <div class="col-md-3">
-					<h6 class="p-2">I am very sorry</h6>
-					<p> Display:5inches</p>
-					<p> RAM:4GB</p>
-					<p> Memory:32GB</p>
+              <h6 class="text-primary">Phone Model A</h6>
+              <p>Display: 5 inches</p>
+              <p>RAM: 4GB</p>
+              <p>Memory: 32GB</p>
             </div>
             <div class="col-md-3">
-					<h5 class="p-2">Quantity</h5>
-				<div class=" text-center">0</div>
+              <h5 class="fs-6">Quantity</h5>
+              <div class="text-center border">1</div>
             </div>
-            <div class="col-md-3  d-flex align-items-center">
-				<div class="text-center ">$120</div>
+            <div class="col-md-3 d-flex align-items-center">
+              <div class="text-center">$120</div>
             </div>
           </div>
         </div>
+
         <div class="product">
-          <div class="row ">
-            <div class="col-md-2">
+          <div class="row">
+            <div class="col-md-3">
               <img
                 src="https://via.placeholder.com/150"
                 class="img-fluid"
-                alt="Product 1"
+                alt="Product 2"
               />
             </div>
             <div class="col-md-3">
-					<h6 class="p-2">I am very sorry</h6>
-					<p> Display:5inches</p>
-					<p> RAM:4GB</p>
-					<p> Memory:32GB</p>
+              <h6 class="text-primary">Phone Model B</h6>
+              <p>Display: 6 inches</p>
+              <p>RAM: 6GB</p>
+              <p>Memory: 64GB</p>
             </div>
             <div class="col-md-3">
-					<h5 class="p-2">Quantity</h5>
-				<div class=" text-center">0</div>
+              <h5 class="fs-6">Quantity</h5>
+              <div class="text-center border">2</div>
             </div>
-            <div class="col-md-3  d-flex align-items-center">
-				<div class="text-center ">$120</div>
+            <div class="col-md-3 d-flex align-items-center">
+              <div class="text-center">$240</div>
             </div>
           </div>
         </div>
+
         <div class="product">
-          <div class="row ">
-            <div class="col-md-2">
+          <div class="row">
+            <div class="col-md-3">
               <img
                 src="https://via.placeholder.com/150"
                 class="img-fluid"
-                alt="Product 1"
+                alt="Product 3"
               />
             </div>
             <div class="col-md-3">
-					<h6 class="p-2">I am very sorry</h6>
-					<p> Display:5inches</p>
-					<p> RAM:4GB</p>
-					<p> Memory:32GB</p>
+              <h6 class="text-primary">Phone Model C</h6>
+              <p>Display: 6.5 inches</p>
+              <p>RAM: 8GB</p>
+              <p>Memory: 128GB</p>
             </div>
-            <div class="col-md-3 ">
-					<h5 class="p-2">Quantity</h5>
-				<div class=" text-center">0</div>
+            <div class="col-md-3">
+              <h5 class="fs-6">Quantity</h5>
+              <div class="text-center border">1</div>
             </div>
-            <div class="col-md-3  d-flex align-items-center">
-				<div class="text-center ">$120</div>
+            <div class="col-md-3 d-flex align-items-center">
+              <div class="text-center">$180</div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Right side: Summary -->
-     <div class="col-md-4 d-flex">
-       <div class="summary h-100">
+      <div class="col-md-4 right">
+        <div class="summary">
           <h4>Summary</h4>
-          <div class="summary-item"><span>Subtotal</span> <span class="float-end">$99.97</span></div>
-          <div class="summary-item"><span>Tax</span> <span class="float-end">$7.00</span></div>
-          <div class="summary-item"><span>Total</span> <span class="float-end"><strong>$106.97</strong></span></div>
-          <button class="btn mt-3">Proceed to Checkout</button>
+          <div class="summary-item"><span>Subtotal</span> <span class="float-end">$540.00</span></div>
+          <div class="summary-item"><span>Tax</span> <span class="float-end">$30.00</span></div>
+          <div class="summary-item"><span>Total</span> <span class="float-end"><strong>$570.00</strong></span></div>
+          <button class="btn">Proceed to Checkout</button>
         </div>
       </div>
     </div>
